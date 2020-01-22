@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    tools{
+        maven 'local maven'
+    }
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building...'
             }
         }
         stage('Test') {
